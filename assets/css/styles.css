@@ -1,18 +1,86 @@
 /* Reset CSS */
 
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
 	margin: 0;
 	padding: 0;
 	border: 0;
@@ -20,42 +88,86 @@ time, mark, audio, video {
 	font: inherit;
 	vertical-align: baseline;
 }
+
 /* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
-footer, header, hgroup, menu, nav, section {
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
 	display: block;
 }
+
 body {
 	line-height: 1;
 }
-ol, ul {
+
+ol,
+ul {
 	list-style: none;
 }
-blockquote, q {
+
+blockquote,
+q {
 	quotes: none;
 }
-blockquote:before, blockquote:after,
-q:before, q:after {
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
 	content: '';
 	content: none;
 }
+
 table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
 
-a{
+a {
 	color: white;
 	text-decoration: none;
 }
+
 /* Google fonts */
 
 /* JetBrains Mono */
-	@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap');
 
 /* Meu CSS */
 
-body{
+/* Barra de rolagem */
+
+::-webkit-scrollbar {
+	width: 12px;
+	height: 12px;
+}
+
+::-webkit-scrollbar-track {
+	background: #202020;
+	border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+	background: #0077ff;
+	border-radius: 10px;
+	border: 3px solid black;
+}
+
+::-webkit-scrollbar-thumb:hover {
+	background: #0077ff;
+}
+
+/* Corpo */
+
+body {
 	font-family: "JetBrains Mono", serif;
 	font-size: 12px;
 	font-style: normal;
@@ -64,12 +176,12 @@ body{
 	overflow: hidden;
 }
 
-.site{
+.site {
 	margin: 0 auto;
 	max-width: 1200px;
 }
 
-.vazio{
+.vazio {
 	width: 15%;
 	height: 10px;
 	background-color: transparent;
@@ -80,13 +192,17 @@ header {
 	top: 0;
 	left: 0;
 	right: 0;
-	background-color: #333;
+	/* Cor de fundo do cabeçalho */
 	color: white;
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
-	padding: 10px 50px;
+	margin: 10px 50px;
+	padding: 10px 0;
 	z-index: 1000;
+	/* Garante que o cabeçalho fique acima do conteúdo */
+	width: calc(100% - 100px);
+	/* Ajusta a largura para compensar as margens */
 }
 
 header div:nth-child(1) {
@@ -126,19 +242,39 @@ header div:nth-child(1) img {
 /* Conteúdo principal */
 
 main {
-	scroll-snap-type: y mandatory; /* Scroll snapping no eixo vertical */
-	overflow-y: scroll; /* Ativa rolagem vertical */
-	height: 100vh; /* Ocupa 100% da altura da viewport */
+	overflow-y: scroll;
+	/* Ativa rolagem vertical */
+	height: 100vh;
+	/* Ocupa 100% da altura da viewport */
+	scroll-snap-type: y mandatory;
+	/* Scroll snapping no eixo vertical */
+	scroll-behavior: smooth;
+	/* Ativa o scroll suave por padrão */
+	padding-top: 80px;
+	/* Compensa o cabeçalho fixo */
 }
 
 /* Cada section */
 .section {
-	scroll-snap-align: start; /* Encaixa no início de cada section */
-	height: 100vh; /* Cada section ocupa toda a tela */
+	scroll-snap-align: start;
+	/* Encaixa no início de cada seção */
+	height: 100vh;
+	/* Cada seção ocupa toda a tela */
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	text-align: center;
+	font-family: Arial, sans-serif;
+	transition: transform 0.5s ease-out;
+	/* Adicionando transição suave */
 }
 
+/* Rodapé */
 
+footer {
+	background-color: #000;
+	color: white;
+	text-align: center;
+	padding: 20px;
+	margin-top: 20px;
+}
