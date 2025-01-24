@@ -149,13 +149,13 @@ body {
 .image-1 {
     width: 100px;
     margin-top: -300px;
-    animation: shake 0.3s infinite;
+    animation: shake 1s infinite;
 }
 
 .image-2 {
     width: 60px;
     margin-top: -500px;
-    animation: shake 0.3s infinite;
+    animation: shake 1s infinite;
 }
 
 @keyframes shake {
