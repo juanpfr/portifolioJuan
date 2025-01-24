@@ -109,20 +109,8 @@ body {
     z-index: -1;
 }
 
-/* Tratamento dos kanjis */
-.hero-images {
-    display: flex;
-    align-items: center;
-}
-
-.image-1 {
-	width: 80px;
-    margin-bottom: 200px;
-}
-
-.image-2 {
-	width: 60px;
-    margin-bottom: 400px;
+.flex{
+	display: flex;
 }
 
 /* Conteúdo principal */
@@ -132,7 +120,10 @@ body {
     text-align: center;
     color: white;
     padding: 20px;
-	margin-right: -7.4%;
+}
+
+.hero-content div:nth-child(1){
+	margin-right: -8%;
 }
 
 .hero-content h1 {
@@ -146,3 +137,18 @@ body {
     text-shadow: 2px 2px 4px #000;
 }
 
+/* Tratamento dos kanjis */
+.hero-images {
+    display: flex;
+    align-items: center;
+}
+
+.image-1 {
+	width: 80px;
+	margin-top: -200px;
+}
+
+.image-2 {
+	width: 60px;
+	margin-top: -400px;
+}
