@@ -81,12 +81,12 @@ time,
 mark,
 audio,
 video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
 }
 
 /* HTML5 display-role reset for older browsers */
@@ -101,100 +101,132 @@ hgroup,
 menu,
 nav,
 section {
-	display: block;
+    display: block;
 }
 
 body {
-	line-height: 1;
+    line-height: 1;
+	overflow-y: hidden;
+}
+
+body, html{
+	overflow-x: hidden;
 }
 
 ol,
 ul {
-	list-style: none;
+    list-style: none;
 }
 
 blockquote,
 q {
-	quotes: none;
+    quotes: none;
 }
 
 blockquote:before,
 blockquote:after,
 q:before,
 q:after {
-	content: '';
-	content: none;
+    content: '';
+    content: none;
 }
 
 table {
-	border-collapse: collapse;
-	border-spacing: 0;
+    border-collapse: collapse;
+    border-spacing: 0;
 }
 
 a {
-	color: white;
-	text-decoration: none;
+    color: white;
+    text-decoration: none;
 }
 
-/* Google fonts */
+*{
+	box-sizing: border-box;
+}
+
+/* Google Fonts */
 
 /* JetBrains Mono */
-@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@100..800&display=swap');
 
 /* Meu CSS */
 
 /* Corpo */
-
 body {
-	font-family: "JetBrains Mono", serif;
-	font-size: 12px;
-	font-style: normal;
-	background-color: #202020;
-	color: white;
+    font-family: "JetBrains Mono", serif;
+    font-size: 12px;
+    font-style: normal;
+    background-color: #2b2b2b;
+    color: white;
+    margin: 0;
 }
 
+/* Site */
 .site {
-	margin: 0 auto;
-	max-width: 1200px;
+    margin: 0 auto;
+    max-width: 1200px;
 }
 
-/* Trabalho do chatgpt alterado abaixo */
-
-/* Seção com vídeo de fundo */
+/* Seção principal */
 .hero-section {
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    height: 100vh;
     position: relative;
-    height: 100vh; /* Ocupa a altura total da janela */
+    overflow: hidden;
     display: flex;
     justify-content: center;
     align-items: center;
-    overflow: hidden; /* Impede que o vídeo ultrapasse os limites da seção */
 }
 
-/* Estilo do vídeo de fundo */
+
+/* Vídeo de fundo */
 .hero-section video {
     position: absolute;
-    top: 50%;
-    left: 50%;
+    top: 0;
+    left: 0;
     width: 100%;
-    transform: translate(-50%, -50%);
-    z-index: -1; /* Coloca o vídeo atrás do conteúdo */
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
 }
 
-/* Conteúdo da seção */
-.hero-section .hero-content {
+/* Tratamento dos kanjis */
+.hero-images {
+    display: flex;
+    align-items: center;
+}
+
+.image-1 {
+	width: 80px;
+    margin-bottom: 200px;
+}
+
+.image-2 {
+	width: 60px;
+    margin-bottom: 400px;
+}
+
+/* Conteúdo principal */
+.hero-content {
     position: relative;
-    z-index: 1; /* Mantém o texto acima do vídeo */
+    z-index: 1; /* Garante que o texto fique acima do vídeo */
     text-align: center;
-    color: #fff;
-	text-shadow: 2px 2px 4px #000;
+    color: white;
     padding: 20px;
+	margin-right: -7.4%;
 }
 
-.hero-section .hero-content h1 {
-    font-size: 3rem;
+.hero-content h1 {
+    font-size: 2rem;
     margin-bottom: 1rem;
+    text-shadow: 2px 2px 4px #000;
 }
 
-.hero-section .hero-content p {
-    font-size: 1.5rem;
+.hero-content p {
+    font-size: 1rem;
+    text-shadow: 2px 2px 4px #000;
 }
+
