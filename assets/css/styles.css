@@ -205,30 +205,71 @@ body {
     overflow: hidden;
     display: flex;
     justify-content: center;
+    flex-direction: column;
     align-items: center;
     background: linear-gradient(to bottom, #000, #202020);
+    gap: 100px;
 }
 
-.tech{
+/* Sobre */
+
+.about{
+    display: flex;
+    gap: 50px;
+}
+
+.about img{
+    width: 450px;
+}
+
+
+/* Tecnologias */
+.tech {
     display: flex;
     flex-direction: column;
     gap: 30px;
 }
 
-.tech h3{
+.tech h3 {
     font-size: 2rem;
     margin-bottom: 1rem;
     text-shadow: 2px 2px 4px #000;
     text-align: center;
 }
 
-.tech-list{
+.tech-list {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    gap: 30px;
+    gap: 50px;
 }
 
-.tech-list img{
+.tech-item {
+    position: relative;
+    text-align: center;
+}
+
+.tech-list img {
     width: 50px;
+    transition: transform 0.3s ease;
+}
+
+.tech-list img:hover {
+    transform: scale(1.5);
+}
+
+.tech-item::after {
+    content: attr(data-tech);
+    position: absolute;
+    bottom: -50px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 1.2rem;
+    color: #fff;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.tech-item:hover::after {
+    opacity: 1;
 }
