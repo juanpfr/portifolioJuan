@@ -231,6 +231,7 @@ body {
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
     padding: 0 25%;
 }
 
@@ -263,6 +264,15 @@ body {
     line-height: 1.5;
     margin-top: 10px;
     text-align: justify;
+}
+
+/* Animação de digitação */
+
+.typing-text {
+    visibility: hidden; /* Esconde o texto inicialmente */
+    white-space: pre-wrap; /* Mantém quebras de linha */
+    overflow: hidden; /* Garante que o texto "corte" durante a animação */
+    animation: blink-cursor 0.6s steps(1) infinite;
 }
 
 /* Tecnologias */
