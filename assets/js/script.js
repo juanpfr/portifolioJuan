@@ -28,7 +28,7 @@ document.addEventListener("DOMContentLoaded", () => {
 document.addEventListener("DOMContentLoaded", () => {
     const textsToAnimate = document.querySelectorAll("[data-animate]");
 
-    const typeText = (element, text, speed = 20) => {
+    const typeText = (element, text, speed = 15) => {
         let index = 0;
         const interval = setInterval(() => {
             element.textContent += text[index];
