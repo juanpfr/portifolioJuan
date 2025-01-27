@@ -1,5 +1,29 @@
 // Meu script
 
+// Indicador de scroll
+document.addEventListener("DOMContentLoaded", () => {
+    const scrollIndicator = document.querySelector(".scroll-indicator");
+    const heroSection = document.querySelector(".hero-section");
+
+    window.addEventListener("scroll", () => {
+        const heroBottom = heroSection.getBoundingClientRect().bottom;
+
+        if (heroBottom < window.innerHeight) {
+            scrollIndicator.classList.add("hidden");
+        } else {
+            scrollIndicator.classList.remove("hidden");
+        }
+    });
+
+    // Adiciona comportamento ao clicar na seta
+    scrollIndicator.addEventListener("click", () => {
+        window.scrollTo({
+            top: heroSection.offsetHeight,
+            behavior: "smooth",
+        });
+    });
+});
+
 // Animação de digitação no parágrafo do sobre
 document.addEventListener("DOMContentLoaded", () => {
     const textsToAnimate = document.querySelectorAll("[data-animate]");

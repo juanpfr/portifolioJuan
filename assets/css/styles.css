@@ -211,6 +211,62 @@ body {
 	font-size: 1.2em;
 }
 
+/* Indicação do scroll */
+.scroll-indicator {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 2rem;
+    color: white;
+    animation: bounce 1.5s infinite;
+    cursor: pointer;
+    z-index: 10;
+}
+
+/* Animação de "pulo" */
+@keyframes bounce {
+    0%, 100% {
+        transform: translateX(-50%) translateY(0);
+    }
+    50% {
+        transform: translateX(-50%) translateY(10px);
+    }
+}
+
+/* Ocultar a seta */
+.scroll-indicator.hidden {
+    display: none;
+}
+
+/* Seta de scroll */
+.scroll-indicator {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 2rem;
+    color: white;
+    animation: bounce 1.5s infinite;
+    cursor: pointer;
+    z-index: 10;
+}
+
+/* Animação de "pulo" */
+@keyframes bounce {
+    0%, 100% {
+        transform: translateX(-50%) translateY(0);
+    }
+    50% {
+        transform: translateX(-50%) translateY(10px);
+    }
+}
+
+/* Ocultar a seta */
+.scroll-indicator.hidden {
+    display: none;
+}
+
 /* Seção sobre */
 
 .about-section{
