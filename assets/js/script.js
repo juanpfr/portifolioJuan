@@ -46,7 +46,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 const text = element.textContent.trim();
                 element.textContent = ""; // Limpa o texto antes de animar
                 element.style.visibility = "visible"; // Torna o texto visível
-                typeText(element, text);
+                typeText(element, text, 10); // Ajuste a velocidade de digitação aqui
                 observer.unobserve(element); // Para de observar após animar
             }
         });

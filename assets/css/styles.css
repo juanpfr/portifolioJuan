@@ -277,7 +277,7 @@ body {
     justify-content: center;
     flex-direction: column;
     align-items: center;
-    background: linear-gradient(to bottom, #000, #003b42);
+    background: linear-gradient(to bottom, #000 5%, #003b42 20%, #003b42 100%);
     gap: 50px;
 }
 
@@ -291,7 +291,7 @@ body {
     padding: 0 25%;
 }
 
-.about img {
+.about-image img{
     width: 100%;
     max-width: 300px;
     border-radius: 10px;
@@ -320,7 +320,12 @@ body {
     line-height: 1.5;
     margin-top: 10px;
     text-align: justify;
+    visibility: hidden;
+    white-space: pre-wrap;
+    overflow: hidden;
+    min-height: 6em;
 }
+
 
 /* Animação de digitação */
 
