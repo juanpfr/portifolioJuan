@@ -21,13 +21,10 @@ nav, section {
     display: block;
 }
 
-body {
-    line-height: 1;
-    overflow-y: hidden;
-}
-
 body, html {
-    overflow-x: hidden;
+    line-height: 1;
+    overflow: hidden;
+    height: 100%;
 }
 
 ol, ul {
@@ -75,10 +72,25 @@ body {
     color: white;
 }
 
+#main-content {
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden;
+    height: 100%; /* O main-content vai ocupar toda a altura da tela */
+    overflow-y: auto; /* Habilita o scroll vertical */
+    scroll-snap-type: y mandatory; /* Aplica o scroll-snap no eixo Y */
+    scroll-behavior: smooth; /* Efeito de rolagem suave */
+}
+
+/* Seções com snap */
+section {
+    scroll-snap-align: start; /* Faz com que o scroll 'fixe' no topo da seção */
+    width: 100vw;
+    min-height: 100vh; /* Garante que cada seção ocupe ao menos a tela inteira */
+}
+
 /* Seção principal */
 .hero-section {
-    margin: 0;
-    padding: 0;
     width: 100vw;
     height: 100vh;
     position: relative;
@@ -277,7 +289,7 @@ body {
     justify-content: center;
     flex-direction: column;
     align-items: center;
-    background: linear-gradient(to bottom, #000 5%, #003b42 20%, #003b42 100%);
+    /*background: linear-gradient(to bottom,#000,#003b42);*/
     gap: 50px;
 }
 
@@ -401,5 +413,4 @@ body {
     justify-content: center;
     flex-direction: column;
     align-items: center;
-    background-color: #003b42;
 }

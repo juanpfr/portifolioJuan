@@ -1,5 +1,21 @@
 // Meu script
 
+// Scroll snap suave
+
+// A partir do evento de scroll, você pode adicionar ou remover classes para destacar as seções
+const sections = document.querySelectorAll("section");
+let currentSection = 0;
+
+window.addEventListener("scroll", () => {
+    sections.forEach((section, index) => {
+        const rect = section.getBoundingClientRect();
+        if (rect.top >= 0 && rect.bottom <= window.innerHeight) {
+            currentSection = index;
+            // Você pode adicionar aqui qualquer efeito de destaque ou animação nas seções visíveis
+        }
+    });
+});
+
 // Indicador de scroll
 document.addEventListener("DOMContentLoaded", () => {
     const scrollIndicator = document.querySelector(".scroll-indicator");
