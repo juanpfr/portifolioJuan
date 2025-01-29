@@ -287,6 +287,10 @@ section {
     z-index: 10;
 }
 
+.scroll-indicator:hover {
+    color: #00e1ff;
+}
+
 /* Animação de "pulo" */
 @keyframes bounce {
     0%, 100% {
@@ -312,17 +316,27 @@ section {
     flex-direction: column;
     align-items: center;
     /*background: linear-gradient(to bottom,#000,#003b42);*/
-    gap: 50px;
+    gap: 80px;
 }
 
 .about {
     display: flex;
-    gap: 30px;
-    flex-wrap: wrap;
+    gap: 100px;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    padding: 0 25%;
+    padding: 0 20%;
+    margin-bottom: 100px;
+}
+
+.about h2{
+    text-align: center;
+    font-size: 4em;
+}
+
+.about div{
+    display: flex;
+    gap: 80px;
 }
 
 .about-text {
@@ -336,7 +350,7 @@ section {
     width: 100%;
 }
 
-.about-text h2 {
+.about-text h3 {
     font-size: 2em;
     text-align: start;
     margin-bottom: 10px;
@@ -351,8 +365,48 @@ section {
     visibility: hidden;
     white-space: pre-wrap;
     overflow: hidden;
-    min-height: 6em;
+    min-height: 7em;
 }
+
+.about-image {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.imagem-container {
+    position: relative;
+    width: 400px; /* O mesmo tamanho que você estava usando */
+    height: auto;
+    perspective: 1000px; /* Dá a sensação de profundidade */
+}
+
+.imagem-container img {
+    position: absolute;
+    top: -185px;
+    left: 0;
+    width: 100%;
+    backface-visibility: hidden; /* Impede que o verso da imagem seja visível quando girada */
+    transition: transform 0.6s;
+}
+
+.frente {
+    z-index: 2; /* A imagem da frente aparece por cima inicialmente */
+}
+
+.imagem-container:hover .frente {
+    transform: rotateY(180deg); /* Gira a imagem da frente ao passar o mouse */
+}
+
+.imagem-container:hover .verso {
+    transform: rotateY(0deg); /* A imagem do verso aparece ao passar o mouse */
+}
+
+.verso {
+    transform: rotateY(-180deg); /* Inicialmente, a imagem do verso está virada */
+}
+
 
 /* Animação de digitação */
 
@@ -437,11 +491,11 @@ section {
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Cria colunas automáticas */
     gap: 30px;
     width: 100%;
-    max-width: 1200px;
+    max-width: 1600px;
 }
 
 .project-item {
-    background-color: #333;
+    background-color: #fff;
     border-radius: 10px;
     overflow: hidden;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -457,18 +511,20 @@ section {
     width: 100%;
     height: 150px;
     border-radius: 10px;
-    object-fit: fill; /* Mantém o aspecto correto da imagem */
+    object-fit: fill;
+    border: 5px solid black;
 }
 
 
 .project-info h4 {
     font-size: 1.2rem;
     margin: 10px 0;
+    color: #000;
 }
 
 .project-info p {
     font-size: 1rem;
-    color: #bbb;
+    color: #292929;
 }
 
 /* Adicionando a lista de tecnologias */
@@ -476,18 +532,16 @@ section {
     display: flex;
     gap: 10px;
     margin-top: 15px;
+    background-color: #202020;
+    border-radius: 5px;
 }
 
 .project-tech img {
-    width: 30px; /* Definido para 30px */
-    height: 30px; /* Garantindo que a altura seja 30px */
-    object-fit: contain; /* Ajuste a imagem para caber no quadrado */
+    width: 30px;
+    height: 30px;
+    object-fit: contain;
     transition: transform 0.3s ease;
-    margin: 10px 5px;
-}
-
-.project-tech img:hover {
-    transform: scale(1.2); /* Mantém o efeito de hover */
+    margin: 10px 0 10px 10px;
 }
 
 /* Efeito de hover no item do projeto */
@@ -519,21 +573,21 @@ section {
 /* Botão Deploy */
 .deploy {
     background-color: #00e1ff;
-    border: 1px solid #00e1ff;
+    border: 1px solid #000;
 }
 
 .deploy:hover {
-    background-color: #00b3cc;
-    transform: scale(1.05);
+    background-color: #1a5158;
 }
 
 /* Botão GitHub */
 .github {
-    background-color: #333;
-    border: 1px solid #fff;
+    background-color: #fff;
+    border: 1px solid #000;
+    color: #000;
 }
 
 .github:hover {
-    background-color: #444;
-    transform: scale(1.05);
+    background-color: #000;
+    color: #fff;
 }
