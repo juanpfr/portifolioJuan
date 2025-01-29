@@ -24,7 +24,8 @@ document.addEventListener("DOMContentLoaded", () => {
     window.addEventListener("scroll", () => {
         const heroBottom = heroSection.getBoundingClientRect().bottom;
 
-        if (heroBottom < window.innerHeight) {
+        // Se a parte inferior da hero-section estiver acima da tela, esconda a seta
+        if (heroBottom <= 0) {
             scrollIndicator.classList.add("hidden");
         } else {
             scrollIndicator.classList.remove("hidden");
