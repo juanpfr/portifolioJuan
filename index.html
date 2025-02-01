@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Juan - Meu Portfólio Online</title>
+    <title>Juan - Meu Portfólio</title>
 
     <!-- Ícone do site -->
     <link rel="shortcut icon" href="assets/images/icons/coffe.ico" type="image/x-icon">
@@ -32,16 +32,15 @@
 <body>
     <main id="main-content">
         <section class="hero-section">
-            <video autoplay muted loop>
-                <source src="assets/images/backgrounds/fundoAnimado.mp4" type="video/mp4">
-                Seu navegador não suporta vídeos em HTML5.
-            </video>
+            <!-- Wallpaper -->
+            <img class="wallpaper" src="assets/images/backgrounds/background.jpg" alt="plano de fundo principal">
+
             <div class="margin">
                 <div class="flex">
                     <div class="hero-content">
                         <div>
                             <h1>Bem-vindo ao meu Portfólio</h1>
-                            <p>Sou Juan, desenvolvedor web.</p>
+                            <p>Juan Pedro, desenvolvedor web.</p>
                         </div>
                     </div>
                     <div class="hero-images">
@@ -86,7 +85,7 @@
                     </div>
                     <div class="about-image col-6 col-md-8">
                         <div class="imagem-container">
-                            <img src="assets/images/projects/standpart5.png" alt="pogers" class="frente">
+                            <img src="assets/images/projects/jogador.png" alt="pogers" class="frente">
                             <img src="assets/images/projects/standpart5.png" alt="pogers" class="verso">
                         </div>
                     </div>
@@ -124,22 +123,31 @@
         <section class="project-section">
             <h2>Projetos</h2>
             <div class="project-grid">
-
+        
+                <!-- Sistema Solar -->
+                <div class="project-item">
+                    <div class="project-info">
+                        <img class="project-image" src="assets/images/projects/projetosistemasolar.png" alt="Projeto Sistema Solar">
+                        <h4>Sistema Solar CSS</h4>
+                        <div class="project-tech">
+                            <img src="assets/images/icons/html-5.png" alt="HTML">
+                            <img src="assets/images/icons/css-3.png" alt="CSS">
+                        </div>
+                        <button class="button see-more" onclick="openModal('Sistema Solar CSS', 'Sistema solar apenas com HTML & CSS. Detalhes adicionais sobre o projeto...', 'assets/images/projects/projetosistemasolar.png', 'https://juanpfr.github.io/sistemaSolar/', 'https://github.com/juanpfr/sistemaSolar')">Ver Mais</button>
+                    </div>
+                </div>
                 <!-- Teacher Camila -->
                 <div class="project-item">
                     <div class="project-info">
                         <img class="project-image" src="assets/images/projects/projetoTeachercamila.png" alt="Projeto Teacher Camila">
                         <h4>Teacher Camila</h4>
-                        <p>Descrição breve do Projeto 2.</p>
                         <div class="project-tech">
                             <img src="assets/images/icons/html-5.png" alt="HTML">
                             <img src="assets/images/icons/css-3.png" alt="CSS">
                             <img src="assets/images/icons/js.png" alt="JavaScript">
                             <img src="assets/images/icons/php.png" alt="PHP">
                         </div>
-                        <div class="project-buttons">
-                            <a href="https://github.com/juanpfr/teacherCamilaSite" target="_blank" class="button github">GitHub</a>
-                        </div>
+                        <button class="button see-more" onclick="openModal('Sistema Solar CSS', 'Sistema solar apenas com HTML & CSS. Detalhes adicionais sobre o projeto...', 'assets/images/projects/projetoTeachercamila.png', '', 'https://github.com/juanpfr/teacherCamila')">Ver Mais...</button>
                     </div>
                 </div>
 
@@ -148,13 +156,10 @@
                     <div class="project-info">
                         <img class="project-image" src="assets/images/projects/projetoTeachercamilaDesktop.jpg" alt="Projeto Teacher Camila Desktop">
                         <h4>Teacher Camila Desktop</h4>
-                        <p>Descrição breve do Projeto 2.</p>
                         <div class="project-tech">
                             <img src="assets/images/icons/csharp.png" alt="Tecnologia CSharp">
                         </div>
-                        <div class="project-buttons">
-                            <a href="https://github.com/juanpfr/teacherCamilaDesktop" target="_blank" class="button github">GitHub</a>
-                        </div>
+                        <button class="button see-more" onclick="openModal('Sistema Solar CSS', 'Sistema solar apenas com HTML & CSS. Detalhes adicionais sobre o projeto...', 'assets/images/projects/projetoTeachercamilaDesktop.jpg', '', 'https://github.com/juanpfr/teacherCamilaDesktop')">Ver Mais...</button>
                     </div>
                 </div>
                 
@@ -163,39 +168,33 @@
                     <div class="project-info">
                         <img class="project-image" src="assets/images/projects/projetoAutoMestre.png" alt="Projeto Auto mestre Desktop">
                         <h4>Auto Mestre Desktop</h4>
-                        <p>Descrição breve do Projeto 2.</p>
                         <div class="project-tech">
                             <img src="assets/images/icons/csharp.png" alt="Tecnologia CSharp">
                         </div>
-                        <div class="project-buttons">
-                            <a href="https://github.com/juanpfr/autoMestre" target="_blank" class="button github">GitHub</a>
-                        </div>
+                        <button class="button see-more" onclick="openModal('Sistema Solar CSS', 'Sistema solar apenas com HTML & CSS. Detalhes adicionais sobre o projeto...', 'assets/images/projects/projetoAutoMestre.png', '', 'https://github.com/juanpfr/autoMestre')">Ver Mais...</button>
                     </div>
                 </div>
-
-                <!-- Sistema Solar -->
-                <div class="project-item">
-                    <div class="project-info">
-                        <img class="project-image" src="assets/images/projects/projetosistemasolar.png" alt="Projeto Sistema Solar">
-                        <h4>Sistema Solar CSS</h4>
-                        <p>Sistema solar apenas com HTML & CSS.</p>
-                        <div class="project-tech">
-                            <img src="assets/images/icons/html-5.png" alt="HTML">
-                            <img src="assets/images/icons/css-3.png" alt="CSS">
-                        </div>
-                        <div class="project-buttons">
-                            <a href="https://juanpfr.github.io/sistemaSolar/" target="_blank" class="button deploy">Deploy</a>
-                            <a href="https://github.com/juanpfr/sistemaSolar" target="_blank" class="button github">GitHub</a>
-                        </div>
-                    </div>
-                </div>
-
+        
                 <!-- Adicionar mais projetos acima deste comentário -->
             </div>
         </section>
+        
+        <!-- Pop-up modal -->
+        <div id="projectModal" class="modal">
+            <div class="modal-content">
+                <!-- Botão de fechar dentro da modal-content -->
+                <span class="close" onclick="closeModal()">&times;</span>
+                <img id="modalImage" src="" alt="" class="modal-image">
+                <h4 id="modalTitle"></h4>
+                <p id="modalDescription"></p>
+                <div class="project-buttons">
+                    <a href="https://juanpfr.github.io/sistemaSolar/" target="_blank" class="button deploy">Deploy</a>
+                    <a href="https://github.com/juanpfr/sistemaSolar" target="_blank" class="button github">GitHub</a>
+                </div>
+            </div>
+        </div>
+        
     </main>
-
-    <footer></footer>
 
     <!-- Scripts -->
 

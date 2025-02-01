@@ -79,20 +79,18 @@ body {
 
 /* Cor de fundo da barra de rolagem */
 ::-webkit-scrollbar-track {
-    background: transparent; /* Fundo da trilha da barra */
+    background: #000; /* Fundo da trilha da barra */
 }
 
 /* Cor e arredondamento da "alavanca" da barra de rolagem */
 ::-webkit-scrollbar-thumb {
-    background-color: #fff; /* Cor branca para a alavanca */
-    border-radius: 10px; /* Arredondamento da alavanca */
-    border: 3px solid transparent; /* Borda transparente para dar um efeito de "flutuação" */
+    background-color: #00e1ff; /* Cor branca para a alavanca */
     background-clip: content-box; /* Faz a borda ficar visível */
 }
 
 /* Efeito de hover na alavanca */
 ::-webkit-scrollbar-thumb:hover {
-    background-color: #00e1ff; /* Cor azul claro quando passar o mouse */
+    background-color: #1a5158; /* Cor azul claro quando passar o mouse */
 }
 
 #main-content {
@@ -108,14 +106,12 @@ body {
 /* Seções com snap */
 section {
     scroll-snap-align: start; /* Faz com que o scroll 'fixe' no topo da seção */
-    width: 100vw;
-    min-height: 100vh; /* Garante que cada seção ocupe ao menos a tela inteira */
+    width: 100dvw;
+    min-height: 100dvh; /* Garante que cada seção ocupe ao menos a tela inteira */
 }
 
 /* Seção principal */
 .hero-section {
-    width: 100vw;
-    height: 100vh;
     display: flex;
     position: relative;
     justify-content: center;
@@ -124,7 +120,7 @@ section {
 
 
 /* Vídeo de fundo */
-.hero-section video {
+.hero-section .wallpaper {
     position: fixed;
     top: 0;
     left: 0;
@@ -224,7 +220,6 @@ section {
 }
 
 .hero-buttons div{
-	background-color: #000;
 	display: flex;
 	align-items: center;
 	padding: 10px 30px;
@@ -235,7 +230,7 @@ section {
 
 .hero-buttons div:hover{
 	border: 1px solid #00e1ff;
-	transform: scale(1.05);
+	transform: scale(1.1);
 }
 
 .hero-buttons img{
@@ -309,8 +304,6 @@ section {
 /* Seção sobre */
 
 .about-section{
-    width: 100vw;
-    height: 100vh;
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -474,8 +467,6 @@ section {
 /* Seção dos projetos */
 
 .project-section{
-    width: 100vw;
-    height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -489,22 +480,21 @@ section {
 .project-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Cria colunas automáticas */
+    flex-wrap: wrap;
     gap: 30px;
     width: 100%;
     max-width: 1600px;
 }
 
 .project-item {
-    background-color: #fff;
     border-radius: 10px;
-    overflow: hidden;
+    border: 2px solid #00e1ff;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 /* Garantir que o link cobre todo o item */
 .project-info {
     padding: 15px;
-    color: white;
 }
 
 .project-image {
@@ -512,27 +502,21 @@ section {
     height: 150px;
     border-radius: 10px;
     object-fit: fill;
-    border: 5px solid black;
+    border: 2px solid #00e1ff;
 }
 
 
 .project-info h4 {
     font-size: 1.2rem;
-    margin: 10px 0;
-    color: #000;
-}
-
-.project-info p {
-    font-size: 1rem;
-    color: #292929;
+    margin: 20px 0;
+    color: #fff;
 }
 
 /* Adicionando a lista de tecnologias */
 .project-tech {
     display: flex;
     gap: 10px;
-    margin-top: 15px;
-    background-color: #202020;
+    margin-top: 20px;
     border-radius: 5px;
 }
 
@@ -541,7 +525,7 @@ section {
     height: 30px;
     object-fit: contain;
     transition: transform 0.3s ease;
-    margin: 10px 0 10px 10px;
+    margin: 0 0 10px 10px;
 }
 
 /* Efeito de hover no item do projeto */
@@ -554,26 +538,28 @@ section {
 .project-buttons {
     display: flex;
     gap: 10px;
-    margin-top: 15px;
+    margin-top: 30px;
     justify-content: center;
 }
 
 .button {
-    padding: 10px 20px;
-    text-decoration: none;
-    color: white;
+    padding: 5px;
     font-weight: bold;
-    border-radius: 5px;
+    border-radius: 20px;
     text-align: center;
     width: 100%;
-    max-width: 150px;
+    margin-top: 30px;
     transition: background-color 0.3s, transform 0.3s ease;
+    font-family: "JetBrains Mono", serif;
+    font-size: 1.2em;
+    font-style: normal;
+    background-color: #00e1ff;
+    border: 1px solid;
 }
 
 /* Botão Deploy */
 .deploy {
-    background-color: #00e1ff;
-    border: 1px solid #000;
+    border: 1px solid #00e1ff;
 }
 
 .deploy:hover {
@@ -590,4 +576,70 @@ section {
 .github:hover {
     background-color: #000;
     color: #fff;
+}
+
+/* Modal */
+.modal {
+    display: none; /* Oculta o modal por padrão */
+    position: fixed;
+    z-index: 1; /* Garante que o modal fique em cima de outros elementos */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.7); /* Fundo escurecido */
+}
+
+.modal-content {
+    background-color: #222;
+    margin: 15% auto;
+    padding: 20px;
+    border-radius: 10px;
+    width: 80%;
+    max-width: 800px;
+    color: white;
+    position: relative; /* Necessário para o botão de fechar se posicionar corretamente */
+}
+
+/* Título no modal (h4) */
+.modal-content h4 {
+    font-size: 1.2rem;
+    margin: 10px 0;
+    color: #fff;
+    margin-top: 20px;
+}
+
+/* Descrição no modal (p) */
+.modal-content p {
+    font-size: 1rem;
+    color: #acacac;
+    margin-top: 20px;
+}
+
+.modal-image {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    border: 1px solid white;
+}
+
+.close {
+    color: white;
+    font-size: 60px;
+    font-weight: bold;
+    position: absolute;
+    top: 10px;
+    right: 25px;
+    cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+    color: #00e1ff;
+}
+
+/* Efeito de hover no botão "Ver Mais" */
+.see-more:hover {
+    background-color: #1a5158;
 }

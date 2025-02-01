@@ -71,3 +71,43 @@ document.addEventListener("DOMContentLoaded", () => {
 
     textsToAnimate.forEach((textElement) => observer.observe(textElement));
 });
+
+// Pop up dos projetos
+
+function openModal(title, description, image, deployLink, githubLink) {
+    // Atualiza o conteúdo do modal com as informações do projeto
+    document.getElementById("modalTitle").textContent = title;
+    document.getElementById("modalDescription").textContent = description;
+    document.getElementById("modalImage").src = image;
+    document.getElementById("modalImage").alt = "Imagem do " + title;
+    
+    // Exibe ou esconde os botões conforme a presença dos links
+    const deployButton = document.querySelector(".modal .deploy");
+    const githubButton = document.querySelector(".modal .github");
+
+    // Se o link de Deploy estiver vazio, oculta o botão Deploy
+    if (deployLink) {
+        deployButton.href = deployLink;
+        deployButton.style.display = "inline-block"; // Exibe o botão
+    } else {
+        deployButton.style.display = "none"; // Oculta o botão
+    }
+
+    // Se o link de GitHub estiver vazio, oculta o botão GitHub
+    if (githubLink) {
+        githubButton.href = githubLink;
+        githubButton.style.display = "inline-block"; // Exibe o botão
+    } else {
+        githubButton.style.display = "none"; // Oculta o botão
+    }
+
+    // Exibe o modal
+    const modal = document.getElementById("projectModal");
+    modal.style.display = "block";
+}
+
+function closeModal() {
+    // Fecha o modal
+    const modal = document.getElementById("projectModal");
+    modal.style.display = "none";
+}
