@@ -640,7 +640,8 @@ section {
 
 .close:hover,
 .close:focus {
-    color: #00e1ff;
+    color: #ff0000;
+    border: 2px solid #ff0000;
 }
 
 /* Efeito de hover no botão "Ver Mais" */
