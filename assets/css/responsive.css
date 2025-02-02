@@ -16,7 +16,7 @@
         margin: 0;
         display: flex;
         flex-direction: column;
-        gap: 200px;
+        gap: 240px;
     }
 
     .hero-images {
@@ -71,5 +71,13 @@
 
     .about div{
         flex-direction: column;
+    }
+
+    .about-section {
+        justify-content: start;
+    }
+
+    .about{
+        gap: 0;
     }
 }
