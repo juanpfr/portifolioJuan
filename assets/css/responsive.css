@@ -133,6 +133,16 @@
     }
 }
 
+/* Telas até 404px */
+
+@media (max-width: 400px) {
+    .tech {
+        padding: 0 18%;
+        margin-top: -60px;
+        border: 0 solid;
+    }
+}
+
 /* Telas até 400px */
 
 @media (max-width: 400px) {
