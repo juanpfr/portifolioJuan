@@ -135,7 +135,7 @@
 
 /* Telas até 404px */
 
-@media (max-width: 400px) {
+@media (max-width: 404px) {
     .tech {
         padding: 0 18%;
         margin-top: -60px;
