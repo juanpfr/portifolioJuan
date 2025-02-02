@@ -1,5 +1,9 @@
 @media (max-width: 480px) {
 
+    ::-webkit-scrollbar {
+        width: 4px; /* Largura da barra de rolagem */
+    }
+
     #main-content {
         height: 100%;
         scroll-snap-type: none;
@@ -37,15 +41,18 @@
 
     .image-3 {
         margin: 0;
-        margin-top: -30px;
+        margin-top: 80px;
     }
 
     .image-4 {
-        display: none;
+        margin: 0;
+        margin-top: -100px;
+        margin-right: -25px;
     }
 
     .hero-content h1 {
         font-size: 1.5rem;
+        margin-top: 40%;
     }
 
     .hero-content p {
@@ -97,12 +104,13 @@
         display: none;
     }
 
-    .tech{
-        padding: 0 13%;
+    .tech {
+        padding: 0 14%;
         margin-top: -60px;
+        border: 0 solid;
     }
 
-    .project-section{
-        margin: 5%;
+    .project-section {
+        margin: 15% 5%;
     }
 }
