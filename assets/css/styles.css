@@ -625,13 +625,17 @@ section {
 }
 
 .close {
-    color: white;
+    color: #000;
     font-size: 60px;
     font-weight: bold;
+    background-color: white;
+    border: 2px solid black;
+    border-radius: 50%;
     position: absolute;
-    top: 10px;
-    right: 25px;
+    top: 5px;
+    right: 7px;
     cursor: pointer;
+    padding: 0 12px;
 }
 
 .close:hover,
