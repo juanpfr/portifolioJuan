@@ -1,4 +1,141 @@
-@media (max-width: 480px) {
+/* Telas até 430px */
+
+@media (max-width: 430px) {
+
+    ::-webkit-scrollbar {
+        width: 4px; /* Largura da barra de rolagem */
+    }
+
+    #main-content {
+        height: 100%;
+        scroll-snap-type: none;
+        scroll-behavior: none;
+    }
+
+    section {
+        scroll-snap-align: none;
+        width: auto;
+        height: 100dvh;
+    }
+
+    .margin {
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        gap: 240px;
+        width: 85%;
+    }
+
+    .hero-images {
+        margin: 0;
+        margin-top: -350px;
+        margin-right: 50px;
+    }
+
+    .image-1 {
+        margin: 0;
+        display: none;
+    }
+
+    .image-2 {
+        margin: 0;
+        display: none;
+    }
+
+    .image-3 {
+        margin: 0;
+        margin-top: 80px;
+    }
+
+    .image-4 {
+        margin: 0;
+        margin-top: -100px;
+        margin-right: -25px;
+    }
+
+    .hero-content h1 {
+        font-size: 2rem;
+        margin-top: 40%;
+    }
+
+    .hero-content p {
+        font-size: 1.25rem;
+    }
+
+    .hero-buttons {
+        margin-top: 100px;
+    }
+
+    .hero-buttons div {
+        padding: 10px 10px;
+        width: 120px;
+        gap: 5px;
+    }
+
+    .hero-buttons a:nth-child(1) div p{
+        margin-left: 7px;
+    }
+
+    .scroll-indicator {
+        display: none;
+    }
+
+    .about div{
+        flex-direction: column;
+        gap: 20px;
+        align-items: center;
+    }
+
+    .about-section {
+        justify-content: start;
+        gap: 0;
+    }
+
+    .about{
+        gap: 0;
+    }
+
+    .about h2 {
+        text-align: center;
+        font-size: 3em;
+    }
+
+    .about-text h3 {
+        margin: 11% 30% 0 0;
+    }
+
+    .about-text p {
+        width: 75%;
+    }
+
+    .imagem-container img {
+        display: none;
+    }
+
+    .tech {
+        padding: 0 20%;
+        margin-top: -60px;
+        border: 0 solid;
+    }
+
+    .project-section {
+        margin: 15% 5%;
+    }
+}
+
+/* Telas até 413px */
+
+@media (max-width: 413px) {
+    .tech {
+        padding: 0 19%;
+        margin-top: -60px;
+        border: 0 solid;
+    }
+}
+
+/* Telas até 360px */
+
+@media (max-width: 360px) {
 
     ::-webkit-scrollbar {
         width: 4px; /* Largura da barra de rolagem */
