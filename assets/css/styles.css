@@ -658,6 +658,15 @@ section {
     align-items: center;
 }
 
+.contact-section > div{
+    width: 100%;
+}
+
+.content-contact-section{
+    width: 100%;
+    display: flex;
+}
+
 .skills-section, .icons-section {
     width: 100%;
     text-align: center;
@@ -675,12 +684,12 @@ section {
 
 .skills-section h2 {
     font-size: 3em;
-    margin: 80px 0 40px 0;
+    margin: 0 0 40px 0;
 }
 
 .icons-section h2{
     font-size: 3em;
-    margin: 40px;
+    margin: 0 0 40px 0;
 }
 
 /* Cards */
@@ -743,9 +752,13 @@ section {
 }
 
 .contact {
-    display: flex;
-    justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
     gap: 25px;
+    max-width: 326px;
+    margin: 0 auto;
+    align-items: center;
+    justify-content: center;
 }
 
 /* Footer */
