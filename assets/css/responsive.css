@@ -231,6 +231,10 @@
         margin-top: -60px;
         border: 0 solid;
     }
+
+    .skills-section h2{
+        margin: 480px 0 40px 0;
+    }
 }
 
 /* Telas até 400px */
